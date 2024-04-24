@@ -91,8 +91,9 @@ Esta parte foi realizada atraves do MySQL Workbanch e pode ser encontrada na pas
 *CONSIDERAÇÔES IMPORTANTES:*
 
 As DML's foram realizadas através da exportação do arquivo .csv para o MySQL, porém os dados que estão na tabela do excel
-ainda estão "desnormalizados". Para ajustar na pasta de "Utilitarios" criei um código em java que separa e filtra os dados, exibindo no terminal
-apenas os dados não repetidos para conseguir preencher a tabela n:n. O código funciona identificando as strings e delimitando pela vírgula.
+ainda estão "desnormalizados". Para ajustar, no arquivo txt de "Utilitarios" criei um código em java que separa e filtra os dados que você
+pode colar em alguma IDE de java ou compilador online, exibindo no terminal apenas os dados não repetidos para conseguir preencher a tabela n:n.
+O código funciona identificando as strings e delimitando pela vírgula.
 Caso tenha problemas com quebras de linha, você pode usar o seguinte site para substituir quebras de linha por virgulas:
 
 https://www.4devs.com.br/remover_trocar_quebra_linha  👨‍💻👨‍💻
