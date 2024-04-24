@@ -26,7 +26,7 @@ Guia - pt_BR
 # Entre em docker-entrypoint-initdb.d com o comando:
 # cd docker-entrypoint-initdb.d
 
-# Execute ls novamente. Provavelmente verá o arquivo Casa_Adocao.sql.
+# Execute ls novamente. Provavelmente verá o arquivo Cannabscript.sql
 
 # Se tudo funcionar, você pode executar: 
 # mysql -p
@@ -37,7 +37,7 @@ Guia - pt_BR
 # Execute show databases; para ver todos os bancos de dados.
 
 # Se quiser fazer consultas no banco de dados, digite os seguintes comandos:
-# use Casa_Adocao;
+# use ESTUDO_CANNABIS;
 # show tables;
 
 # Agora, você pode realizar consultas na base de dados. Divirta-se!
