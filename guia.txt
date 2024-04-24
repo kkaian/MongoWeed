@@ -1,0 +1,43 @@
+Guia - pt_BR
+
+# Você pode criar uma imagem executando:
+# docker build -t mysql_db . (este comando cria uma imagem com este nome)
+# O ponto (.) final irá criar uma imagem usando o Dockerfile presente no diretório atual.
+
+# Para listar todas as imagens na sua máquina, você pode executar:
+# docker images
+
+# Depois, você pode criar um container executando:
+# docker run --name myFirstDB -dti mysql_db
+# Isso criará um container chamado myFirstDB a partir da imagem mysql_db.
+
+# Para listar todos os containers ativos na sua máquina, você pode executar:
+# docker ps
+
+# Você pode entrar no container com o comando:
+# docker exec -it myFirstDB bin/bash
+
+# Após isso, você pode listar todas as pastas com:
+# ls
+
+# Uma das pastas é docker-entrypoint-initdb.d, uma pasta padrão criada no container 
+# durante a criação.
+
+# Entre em docker-entrypoint-initdb.d com o comando:
+# cd docker-entrypoint-initdb.d
+
+# Execute ls novamente. Provavelmente verá o arquivo Casa_Adocao.sql.
+
+# Se tudo funcionar, você pode executar: 
+# mysql -p
+# Ele irá pedir a senha, então é só utilizar a senha root
+# Este comando permite entrar no banco de dados usando a senha configurada na variável de 
+# ambiente (ENV) na linha 3 do Dockerfile.
+
+# Execute show databases; para ver todos os bancos de dados.
+
+# Se quiser fazer consultas no banco de dados, digite os seguintes comandos:
+# use Casa_Adocao;
+# show tables;
+
+# Agora, você pode realizar consultas na base de dados. Divirta-se!
