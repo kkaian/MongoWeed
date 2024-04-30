@@ -2,10 +2,10 @@ services:
   mysql:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: BobMarley420
-      MYSQL_DATABASE: MySQLombra
+      MYSQL_ROOT_PASSWORD: bobmarley420
+      MYSQL_DATABASE: mysqlombra
     ports:
-      - "8080:8080"
+      - "3306:3306"
     volumes:
       - ./datannabis/cannabscript.sql:/docker-entrypoint-initdb.d/cannabscript.sql
 

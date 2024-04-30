@@ -37,7 +37,32 @@ Guia - pt_BR
 # Execute show databases; para ver todos os bancos de dados.
 
 # Se quiser fazer consultas no banco de dados, digite os seguintes comandos:
-# use ESTUDO_CANNABIS;
+# use mysqlombra;
 # show tables;
 
 # Agora, você pode realizar consultas na base de dados. Divirta-se!
+
+ -------------------------------------------------------------------
+                    INICIANDO DOCKER COMPOSE
+
+# Primeiro de tudo abriremos o software | DOCKER DESKTOP | para nao haver erros nos proximos passos. 
+
+
+# Primeiro de tudo vamos dar o comando | docker-compose up -d | 
+# Isso criará o container contendo o banco de dados.
+
+# Verificamos se está em execução com o comando | docker ps |.
+
+
+# Após isso vamos usar o comando | docker-compose exec mysql mysql -uroot -p |
+# Assim será executado nosso container no mysql e poder fazer as consultas.
+
+
+# Ademais, os comandos seguintes estarão no  .-primeiro guia-.
+
+ --------------------------------------------------------------------
+
+ # Para inserir dados: | sql = "INSERT INTO tabela (coluna1, coluna2, ...) VALUES (%s, %s, ...)" |
+ # values = (row['coluna1'], row['coluna2'], ...)
+
+ # Depois só executar o script python para executar a inserção.
