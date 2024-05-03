@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS Variedade(
 idVariedade INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nomeVariedade VARCHAR(255),
 descricao TEXT,
-avaliacao FLOAT,
+avaliacao DECIMAL(5,1),
 Cannabis_idCannabis INT UNSIGNED NOT NULL,
 FOREIGN KEY (cannabis_idCannabis)
 REFERENCES Cannabis(idCannabis) 
