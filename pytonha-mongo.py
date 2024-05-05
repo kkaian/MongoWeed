@@ -27,7 +27,7 @@ def importar_desnormalizar_mysql(db):
 
     # Query para selecionar os dados normalizados do MySQL
     query = """
-        SELECT Cannabis.tipo, Variedade.nomeVariedade, Variedade.descricao, Variedade.avaliacao, GROUP_CONCAT(Sabores.saborCannabis) AS sabores, GROUP_CONCAT(Efeitos.efeitoCannabis) AS efeitos
+        SELECT Cannabis.tipo, Variedade.nomeVariedade, Variedade.descricao, Variedade.avaliacao, GROUP_CONCAT(DISTINCT Sabores.saborCannabis) AS sabores, GROUP_CONCAT(DISTINCT Efeitos.efeitoCannabis) AS efeitos
         FROM Variedade
         JOIN Cannabis ON Variedade.Cannabis_idCannabis = Cannabis.idCannabis
         LEFT JOIN Sabor_Variedade ON Variedade.idVariedade = Sabor_Variedade.Variedade_idVariedade

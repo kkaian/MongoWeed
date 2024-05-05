@@ -2,7 +2,7 @@ import mysql.connector
 import pandas as pd
 import numpy as np
 
-arquivo_csv = 'Utilitarios/cannabis.csv'
+arquivo_csv = 'Utilitarios/baga.csv'
 
 # Ler o arquivo CSV e carregar os dados em um DataFrame do Pandas
 df = pd.read_csv(arquivo_csv)

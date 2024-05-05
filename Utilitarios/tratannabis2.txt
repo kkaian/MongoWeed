@@ -1,10 +1,8 @@
--criar uma descrição da utilização do código-
-
-
-
-
-
-
+# Esse código imprime a organização de id's.
+# Primeiramente você deve colocar a tabela de valores únicos que conseguiu com tratannabis 1.
+# o segundo passo é acessar o site fornecido no read.me e substituir as quebras de linha da tabela multivalorada por "//"
+# E voala ele imprime os id's da tabela principal (vareiedade) repetidos na quantidade de repetição de Elementos
+# e depois vc pode digitar S no terminal e ele exibe os id's dos elemntos multivalorados
 
 import java.util.*;
 

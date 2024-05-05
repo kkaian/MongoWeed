@@ -1,11 +1,5 @@
--criar uma descrição da utilização do código-
-
-
-
-
-
-
-
+# Neste código você irá inserir a tabela que contém repetição e o código imprimirá no terminal os valores únicos.
+# caso sua tabela tenha quebras de linha acesse o site fornecido no read.me
 
 import java.util.Scanner;
 import java.util.List;

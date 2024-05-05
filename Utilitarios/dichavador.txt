@@ -1,68 +1,46 @@
-Guia - pt_BR
-
-# Você pode criar uma imagem executando:
-# docker build -t mysql_db . (este comando cria uma imagem com este nome)
-# O ponto (.) final irá criar uma imagem usando o Dockerfile presente no diretório atual.
-
-# Para listar todas as imagens na sua máquina, você pode executar:
-# docker images
-
-# Depois, você pode criar um container executando:
-# docker run --name myFirstDB -dti mysql_db
-# Isso criará um container chamado myFirstDB a partir da imagem mysql_db.
-
-# Para listar todos os containers ativos na sua máquina, você pode executar:
-# docker ps
-
-# Você pode entrar no container com o comando:
-# docker exec -it myFirstDB bin/bash
-
-# Após isso, você pode listar todas as pastas com:
-# ls
-
-# Uma das pastas é docker-entrypoint-initdb.d, uma pasta padrão criada no container 
-# durante a criação.
-
-# Entre em docker-entrypoint-initdb.d com o comando:
-# cd docker-entrypoint-initdb.d
-
-# Execute ls novamente. Provavelmente verá o arquivo Cannabscript.sql
-
-# Se tudo funcionar, você pode executar: 
-# mysql -p
-# Ele irá pedir a senha, então é só utilizar a senha root
-# Este comando permite entrar no banco de dados usando a senha configurada na variável de 
-# ambiente (ENV) na linha 3 do Dockerfile.
-
-# Execute show databases; para ver todos os bancos de dados.
-
-# Se quiser fazer consultas no banco de dados, digite os seguintes comandos:
-# use mysqlombra;
-# show tables;
-
-# Agora, você pode realizar consultas na base de dados. Divirta-se!
-
- -------------------------------------------------------------------
+-------------------------------------------------------------------
                     INICIANDO DOCKER COMPOSE
 
-# Primeiro de tudo abriremos o software | DOCKER DESKTOP | para nao haver erros nos proximos passos. 
+# Primeiro de tudo abriremos o software | DOCKER DESKTOP | para nao haver erros nos próximos passos. 
 
 
-# Primeiro de tudo vamos dar o comando | docker-compose up -d | 
+# Para dar inicio inserimos o comando | docker-compose up -d | 
 # Isso criará o container contendo o banco de dados.
 
 # Verificamos se está em execução com o comando | docker ps |.
 
+# Após isso vamos usar o comando | docker-compose exec mysql mysql -uroot -pbobmarley420 mysqlombra |
 
-# Após isso vamos usar o comando | docker-compose exec mysql mysql -uroot -p |
-# Assim será executado nosso container no mysql e poder fazer as consultas.
+# Assim será executado nosso container no mysql e poderemos fazer as consultas.
 
+# Execute "show databases;" para ver todos os bancos de dados.
 
-# Ademais, os comandos seguintes estarão no  .-primeiro guia-.
+# Se quiser fazer consultas no banco de dados, digite os seguintes comandos:
+# "use mysqlombra;"
+# "show tables;"
+
+# Agora pode realizar consultas na base de dados.
 
  --------------------------------------------------------------------
+         INSERINDO DADOS CSV NO CONTAINER MYSQL
 
- # Para inserir dados: | sql = "INSERT INTO tabela (coluna1, coluna2, ...) VALUES (%s, %s, ...)" |
- # values = (row['coluna1'], row['coluna2'], ...)
+#   Executar o script pytonha-mysql.py
 
- # Depois só executar o script python para executar a inserção.
+ -------------------------------------------------------------------- 
+        IMPORTAR E DESNORMALIZAR DO MYSQL PARA MONGODB
+
+#   Baixar o MongoShell
+
+#   Executar pytonha-mongo.py     
+
+#   Executar comando: docker-compose exec mongodb mongosh  
+
+#   Executar o comando: show databases ---> use mongothc ---> db.Cannabis.find()
+
+ ---------------------------------------------------------------------
+		UTILIZANDO O QUERYS_CHAPAR
+
+# Escolher a query requerida e tirar de comentario
+
+
+# Executar o querys_chapar.py
