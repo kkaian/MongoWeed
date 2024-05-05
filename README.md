@@ -89,7 +89,7 @@ alguns ajustes e interpretações de dados, chegamos ao seguinte modelo:
 
 **DDL's:**
 
-Esta parte foi realizada atraves do MySQL Workbanch, após a criação foi adicionado o arquivo 'cannabscript.sql' dentro do código contendo todos a criação do database, que pode ser encontrada na pasta "DATANNABIS_SQL"
+Esta parte foi realizada atraves do MySQL Workbanch, após a criação foi adicionado o arquivo 'cannabscript.sql' dentro do código contendo todos a criação do database, que pode ser encontrada na pasta "datannabis"
 
 *CONSIDERAÇÔES IMPORTANTES:*
 
@@ -106,7 +106,7 @@ As ações de atualizar e excluir dados podem ser feitas após rodar o docker do
 
 **DQL's:**
 
-Como o terminal após a rodagem do docker serve como interpretador sql, você pode fazer as consultas por lá. Foi deixado dentro de "DATANNABIS_SQL" o arquivo 'Querys_uma_bufa.txt contendo algumas consulas
+Como o terminal após a rodagem do docker serve como interpretador sql, você pode fazer as consultas por lá. Foi deixado dentro de "datannabis" o arquivo 'Querys_uma_bufa.txt contendo algumas consulas
 que podem ser realizadas para testar o banco.
 
 OBS: dentro da pasta "Utilitarios" Você pode encontrar vc pode encontrar o arquivo 'Baga.csv' que é uma versão reduzida do 'cannabis.csv' com apenas 50 registros para a inserção ser mais rápida
@@ -132,6 +132,8 @@ https://www.4devs.com.br/remover_trocar_quebra_linha
 
 A tecnologia escolhida foi o MongoDB 🍃, que no PDF abaixo você pode acompanhar sobre a tecnologia escolhida, como é feita a passagem de dados através do docker como apresentado nos códigos acima, ou caso tenha as plataformas,
 utilizando uma ferramenta inovadora, o MongoDb Relational Migrator.
+
+(Os códigos de passagem de dados podem ser encontrados em 'pytonha-mongo.py', as querys podem ser encontradas no arquivo 'Querys_chapar')
 
 (O PDF ABORDANDO ESTA PARTE DO PROJETO ESTÁ EM PRODUÇÃO E VOCÊ PODE ACOMPANHAR EM:
 https://www.canva.com/design/DAGDVjwYESc/DVLPFGNzjC_HSYFLdvwUFg/edit?utm_content=DAGDVjwYESc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton )

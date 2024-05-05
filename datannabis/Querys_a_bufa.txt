@@ -1,0 +1,36 @@
+
+-- Query 1: Selecionar o nome e a descrição de todas as variedades com avaliação maior que 4
+
+SELECT nomeVariedade, descricao FROM Variedade WHERE avaliacao > 4;
+
+-- Query 2: Contar o número total de variedades para cada tipo de 
+
+SELECT c.tipo, COUNT(v.idVariedade) AS num_variedades
+FROM Cannabis c
+JOIN Variedade v ON c.idCannabis = v.Cannabis_idCannabis
+GROUP BY c.tipo;
+
+
+-- Query 3: Selecionar as variedades com sabores de 'Doce' e 'Cítrico'
+
+SELECT v.nomeVariedade
+FROM Variedade v
+JOIN Sabor_Variedade sv ON v.idVariedade = sv.Variedade_idVariedade
+JOIN Sabores s ON sv.Sabores_idSabor = s.idSabor
+WHERE s.saborCannabis IN ('Sweety', 'Citric');
+
+
+-- Query 4: Contar o número total de efeitos distintos para cada variedade
+
+SELECT v.nomeVariedade, COUNT(DISTINCT e.idEfeito) AS num_efeitos
+FROM Variedade v
+JOIN Efeito_Variedade ev ON v.idVariedade = ev.Variedade_idVariedade
+JOIN Efeitos e ON ev.Efeitos_idEfeito = e.idEfeito
+GROUP BY v.nomeVariedade;
+
+
+-- Query 5: Selecionar as variedades com descrição que contenha a palavra 'sativa'
+SELECT nomeVariedade
+FROM Variedade
+WHERE descricao LIKE '%sativa%';
+

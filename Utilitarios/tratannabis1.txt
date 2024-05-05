@@ -1,0 +1,59 @@
+-criar uma descrição da utilização do código-
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Table {
+
+    public static void main(String[] args) {
+        Scanner board = new Scanner(System.in);
+        ArrayList<String> Elementos = new ArrayList<>();
+
+        int inicio_string = 0;
+        int fim_string = 0;
+        String Dados;
+
+        System.out.println("INFORME A TABELA (obs:coloque uma virgula no final da string)");
+
+        Dados = board.nextLine();
+
+
+        for (int i = 0; i < Dados.length(); i++) {
+
+            if (Dados.charAt(i) == ',') {
+
+                fim_string = i;
+                String elemento = Dados.substring(inicio_string, fim_string);
+                int verificacao = verifica(elemento, Elementos);
+                if (verificacao == 1) {
+                    Elementos.add(elemento);
+                }
+                inicio_string = i + 1;
+            }
+        }
+
+        board.close();
+
+
+        for (String elemento : Elementos) {
+            System.out.println(elemento);
+        }
+    }
+
+    public static int verifica(String elemento, List<String> Elementos) {
+        for (String e : Elementos) {
+            if (e.equals(elemento)) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+}

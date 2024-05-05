@@ -1,0 +1,65 @@
+-criar uma descrição da utilização do código-
+
+
+
+
+
+
+
+import java.util.*;
+
+public class TabelaString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Receber a tabela de strings separadas por vírgula
+        System.out.println("Insira a tabela de strings separadas por vírgula:");
+        String tabelaString = scanner.nextLine();
+        
+        // Criar uma lista para armazenar as palavras e seus índices
+        List<String> palavras = Arrays.asList(tabelaString.split(","));
+        Map<String, Integer> indicePalavras = new HashMap<>();
+        for (int i = 0; i < palavras.size(); i++) {
+            indicePalavras.put(palavras.get(i), i + 1);
+        }
+        
+        // Receber a última string com valores entre //
+        System.out.println("Insira a última string com valores entre //:");
+        String ultimaString = scanner.nextLine();
+        
+        // Criar uma lista de listas para armazenar os grupos de índices
+        List<List<Integer>> grupos = new ArrayList<>();
+        for (String grupo : ultimaString.split("//")) {
+            List<Integer> indices = new ArrayList<>();
+            for (String elemento : grupo.split(",")) {
+                indices.add(indicePalavras.get(elemento));
+            }
+            grupos.add(indices);
+        }
+        
+        // Imprimir a tabela de grupos
+        System.out.println("\nTabela de Grupos:");
+        for (int i = 1; i <= grupos.size(); i++) {
+            List<Integer> grupo = grupos.get(i - 1);
+            for (int j = 0; j < grupo.size(); j++) {
+                System.out.println(i); // Imprime o número do grupo
+            }
+        }
+        
+        // Perguntar se deseja imprimir a tabela de associação
+        System.out.println("\n==========================Deseja imprimir a tabela de associação? (S ou N)=================================");
+        String resposta = scanner.nextLine();
+        
+        // Imprimir a tabela de associação de palavras, se a resposta for S
+        if (resposta.equalsIgnoreCase("S")) {
+            System.out.println("\nTabela de Associação de Palavras:");
+            for (List<Integer> grupo : grupos) {
+                for (Integer indice : grupo) {
+                    System.out.println(indice);
+                }
+            }
+        }
+        
+        scanner.close();
+    }
+}
