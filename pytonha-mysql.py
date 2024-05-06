@@ -41,21 +41,24 @@ for index, row in df.iterrows():
     avaliacao = row['Rating']
     
     
-    # Inserir os dados na tabela Cannabis
-    cursor.execute("INSERT INTO Cannabis (tipo) VALUES (%s)", (tipo,))
-    conn.commit()
+     # Verificar se o tipo já existe na tabela Cannabis
+    cursor.execute("SELECT idCannabis FROM Cannabis WHERE tipo = %s", (tipo,))
+    tipo_cannabis = cursor.fetchone()
+    
+    # Se o tipo já existe, obter o ID
+    if tipo_cannabis:
+        cannabis_id = tipo_cannabis[0]
+    # Caso contrário, inserir o novo tipo na tabela Cannabis e obter o ID
+    else:
+        cursor.execute("INSERT INTO Cannabis (tipo) VALUES (%s)", (tipo,))
+        conn.commit()
+        cannabis_id = cursor.lastrowid
 
-    # Obter o último ID inserido na tabela Cannabis
-    cursor.execute("SELECT LAST_INSERT_ID()")
-    cannabis_id = cursor.fetchone()[0]
-
-    # Inserir os dados na tabela Variedade, usando o último ID inserido na tabela Cannabis
+    # Inserir os dados na tabela Variedade, usando o ID do tipo
     cursor.execute("INSERT INTO Variedade (nomeVariedade, descricao, avaliacao, Cannabis_idCannabis) VALUES (%s, %s, %s, %s)", (variedade, descricao, avaliacao, cannabis_id))
     conn.commit()
 
-    variedade_id = cursor.execute("SELECT LAST_INSERT_ID()")
-    variedade_id = cursor.fetchone()[0]
-    
+    variedade_id = cursor.lastrowid
 
     # Relacionar os efeitos com a variedade
      # **Verificar se o valor em 'Effects' é uma string**

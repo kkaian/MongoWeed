@@ -89,11 +89,11 @@ alguns ajustes e interpretações de dados, chegamos ao seguinte modelo:
 
 **DDL's:**
 
-Esta parte foi realizada atraves do MySQL Workbanch, após a criação foi adicionado o arquivo 'cannabscript.sql' dentro do código contendo todos a criação do database, que pode ser encontrada na pasta "datannabis"
+Esta parte foi realizada através do MySQL Workbanch, após a criação foi adicionado o arquivo 'cannabscript.sql' dentro do código contendo todos a criação do database, que pode ser encontrada na pasta "datannabis" e assim que roda o docker compose é criada pois está especificada no 'volumes'.
 
 *CONSIDERAÇÔES IMPORTANTES:*
 
-*  Você pode encontrar um turtorial para rodar o docker-compose mysql na pasta 'Utilitarios' no arquivo 'dichavador.txt'.
+*  Você pode encontrar um tutorial para rodar o docker-compose mysql na pasta 'Utilitarios' no arquivo 'dichavador.txt'.
 *  O volume está especificando o arquivo usado para criação das DDL's
 *  Você pode ter problemas em executar os comandos na porta 3306 caso tenha o 'MySQl Workbanch' instalado na máquina por conta da utilização da porta.
 
