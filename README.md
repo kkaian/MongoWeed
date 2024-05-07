@@ -123,7 +123,7 @@ https://www.4devs.com.br/remover_trocar_quebra_linha
 
 (Mais detalhes da utilização estão nos arquivos txt)
 
-*Você vizualizar tabela em:* https://docs.google.com/spreadsheets/d/1AN3Y1RjH6uOqMchvEOT4V-mCViRbtjSTvznZNiuqHx0/edit?usp=sharing
+*Você pode vizualizar tabela em:* https://docs.google.com/spreadsheets/d/1AN3Y1RjH6uOqMchvEOT4V-mCViRbtjSTvznZNiuqHx0/edit?usp=sharing
 
 ***
  
