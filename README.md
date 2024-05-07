@@ -133,7 +133,7 @@ https://www.4devs.com.br/remover_trocar_quebra_linha
 A tecnologia escolhida foi o MongoDB 🍃, que no PDF abaixo você pode acompanhar sobre a tecnologia escolhida, como é feita a passagem de dados através do docker como apresentado nos códigos acima, ou caso tenha as plataformas,
 utilizando uma ferramenta inovadora, o MongoDb Relational Migrator.
 
-(Os códigos de passagem de dados estão em 'pytonha-mongo.py', as querys podem ser encontradas no arquivo 'Querys_chapar' ou podem rodar no terminal seguindo o tutorial do dichavador.txt)
+(Os códigos de passagem de dados estão em 'pytonha-mongo.py', as querys + CRUD podem ser encontradas no arquivo 'Querys_chapar' ou podem rodar no terminal seguindo o tutorial do dichavador.txt)
 
 (O PDF ABORDANDO ESTA PARTE DO PROJETO ESTÁ EM PRODUÇÃO E VOCÊ PODE ACOMPANHAR EM:
 https://www.canva.com/design/DAGDVjwYESc/DVLPFGNzjC_HSYFLdvwUFg/edit?utm_content=DAGDVjwYESc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton )
