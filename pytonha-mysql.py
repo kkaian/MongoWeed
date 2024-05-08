@@ -1,6 +1,6 @@
 import mysql.connector
 import pandas as pd
-import numpy as np
+
 
 arquivo_csv = 'Utilitarios/baga.csv'
 
