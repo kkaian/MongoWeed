@@ -135,10 +135,9 @@ utilizando uma ferramenta inovadora, o MongoDb Relational Migrator.
 
 (Os códigos de passagem de dados estão em 'pytonha-mongo.py', as querys + CRUD podem ser encontradas no arquivo 'Querys_chapar' ou podem rodar no terminal seguindo o tutorial do dichavador.txt)
 
-PDF COM EXPLICAÇÃO DA TRANSFERÊNCIA DE DADOS:
+PDF COM EXPLICAÇÃO DA TECNOLOGIA NOSQL E TRANSFERÊNCIA DE DADOS:
 
 https://www.canva.com/design/DAGETpa6esM/TEzhV8nWmG0ZL4UrcT_RUg/edit?utm_content=DAGETpa6esM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
 
 
 
