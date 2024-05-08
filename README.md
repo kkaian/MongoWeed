@@ -13,7 +13,7 @@ fazendo uso dos bancos através do docker.
 * Aplicar DDL's, DML's e DQL's (SQL) (Docker)
 * Dicionário de dados (CSV)
 * Fazer passagem de dados (SQL -> NoSQL) (Docker)
-* Explicação da tecnologia NoSQL e passgaem de dados (PDF)
+* Explicação da tecnologia NoSQL e passagem de dados (PDF)
 
  ***
 
