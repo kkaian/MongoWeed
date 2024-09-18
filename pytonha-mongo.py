@@ -4,9 +4,9 @@ from decimal import Decimal
 
 # Função para conectar ao MongoDB
 def conectar_mongodb():
-    # Conectando ao servidor MongoDB (localhost, porta padrão 27017)
+    # Conectando ao servidor MongoDB 
     client = pymongo.MongoClient("mongodb://localhost:27017/")
-    # Acessando um banco de dados (substitua 'nome_do_banco' pelo nome desejado)
+    # Acessando um banco de dados 
     db = client["mongothc"]
     return db
 
